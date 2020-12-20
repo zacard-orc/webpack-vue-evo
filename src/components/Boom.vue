@@ -4,6 +4,7 @@
         <div class="msg2">{{msg}}</div>
         <p class="lin1">Boom</p>
         <div class="rect1"></div>
+        <div class="rect2"></div>
     </div>
 </template>
 
@@ -44,5 +45,10 @@
         color: $daily;
     }
 
+    .rect2{
+        width: 300px;
+        height: 50px;
+        background-color: deepskyblue;
+    }
 
 </style>
