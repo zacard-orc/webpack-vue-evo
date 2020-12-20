@@ -11,18 +11,17 @@
 <script>
 
   import Boom from './Boom';
-  import '@/assets/less/helloworld.less'
-
+  import '@/assets/less/helloworld.less';
 
   export default {
     name: 'HelloWorld',
     components: {
-      Boom
+      Boom,
     },
     props: {
-      msg: String
-    }
-  }
+      msg: String,
+    },
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
