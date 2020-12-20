@@ -1,6 +1,9 @@
 module.exports = {
   css: {
     loaderOptions: {
+      sass:{
+
+      },
       less: {
         additionalData: `@env: ${process.env.NODE_ENV};`,
         lessOptions: {
