@@ -3,6 +3,7 @@
         <div class="msg">{{ msg }}</div>
         <div class="msg2">{{msg}}</div>
         <p class="lin1">Boom</p>
+        <div class="rect1"></div>
     </div>
 </template>
 
@@ -20,7 +21,7 @@
       [1, 2, 3].map(console.log);
       const mx = 'Hello';
       // const b = `asdfa ${mx}bbbb`;
-      const b = 'asdfa'+ mx+'bbbb';
+      const b = 'asdfa' + mx + 'bbbb';
       console.log(b);
       const bbb = {
         aa1: 1,
@@ -42,5 +43,6 @@
     .msg2 {
         color: $daily;
     }
+
 
 </style>
