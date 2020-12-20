@@ -1,24 +1,12 @@
-# vueexc_hello1
+# vue-cli webpack evo
 
-## Project setup
-```
-yarn install
-```
+h5适配基础配置
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+# How to use
+```bash
+git clone https://github.com/zacard-orc/webpack-vue-evo.git
+yarn
+yarn run server
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
