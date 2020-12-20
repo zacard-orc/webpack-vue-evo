@@ -11,7 +11,7 @@
 <script>
 
   import Boom from './Boom';
-  import '../assets/less/helloworld.less'
+  import '@/assets/less/helloworld.less'
 
 
   export default {

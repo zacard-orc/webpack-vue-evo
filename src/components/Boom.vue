@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import '../assets/scss/boom.scss'
+  import '@/assets/scss/boom.scss'
 
   export default {
     name: 'Boom',
