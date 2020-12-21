@@ -9,12 +9,24 @@
   },
   "extends": [
     "plugin:vue/essential",
-    "eslint:recommended",
-    "prettier"
+    "eslint-config-airbnb-base"
   ],
   "parserOptions": {
     "parser": "babel-eslint"
   },
   "rules": {
-  }
+    "import/no-unresolved": "off",
+    "import/no-extranous-dependencies": 0
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.vue",
+        "src/**/*.js",
+        "src/**/*.jsx"
+      ],
+      "rules": {
+      }
+    }
+  ]
 }
