@@ -30,7 +30,7 @@ export default {
       cc1: 333,
     };
     const {
-      aa1,bb1, cc1,
+      aa1, bb1, cc1,
     } = bbb;
     console.log(aa1, bb1, cc1);
   },
