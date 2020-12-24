@@ -8,7 +8,7 @@ module.exports = {
       viewportUnit: 'vw',
       fontViewportUnit: 'vw',
       selectorBlackList: [],
-      minPixelValue: 1,
+      minPixelValue: 0,
       mediaQuery: false,
       replace: true,
       exclude: undefined,
