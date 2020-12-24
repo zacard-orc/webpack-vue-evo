@@ -34,7 +34,7 @@ module.exports = {
         "src/**/*.jsx"
       ],
       rules: {
-        'no-console': isDev ? 'off' : 'error',
+        'no-console': 'off',
       }
     }
   ]

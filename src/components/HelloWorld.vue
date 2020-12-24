@@ -54,11 +54,13 @@ export default {
     width: 700px;
   }
 
-  .g-1px-fix:after {
+  .g-1px-fix::after {
     content: '';
     display: block;
-    /*position: absolute;*/
-    /*bottom: 0;*/
+
+    /* position: absolute; */
+
+    /* bottom: 0; */
     background: #000;
     width: 100%;
     height: 1px;
@@ -75,8 +77,8 @@ export default {
   .g-1px-svg-rxrect {
     margin-top: 40px;
     height: 100px;
-    /*border-radius: 10px;*/
-    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' rx='30' fill='none' stroke='red' /></svg>");
 
+    /* border-radius: 10px; */
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' rx='30' fill='none' stroke='red' /></svg>");
   }
 </style>

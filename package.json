@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "cross-env NODE_ENV=development vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lintcss": "stylelint src/assets/**/*.*ss src/components/*.vue --fix"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -16,13 +17,14 @@
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-vue": "^6.2.2",
     "less": "^4.0.0",
     "less-loader": "^7.1.0",
@@ -31,8 +33,10 @@
     "prettier": "2.2.1",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
-    "vue-template-compiler": "^2.6.11",
-    "cross-env": "^7.0.3"
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
     "> 1%",

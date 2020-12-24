@@ -15,7 +15,7 @@ module.exports = {
       include: undefined,
       landscape: false,
       landscapeUnit: 'vw',
-      landscapeWidth: 750
-    }
-  }
+      landscapeWidth: 750,
+    },
+  },
 };

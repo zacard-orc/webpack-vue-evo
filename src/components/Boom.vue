@@ -39,16 +39,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    $daily: green;
+$daily: green;
 
-    .msg2 {
-        color: $daily;
-    }
+.msg2 {
+  color: $daily;
+}
 
-    .rect2{
-        width: 300px;
-        height: 50px;
-        background-color: deepskyblue;
-    }
-
+.rect2 {
+  width: 300px;
+  height: 50px;
+  background-color: deepskyblue;
+}
 </style>
