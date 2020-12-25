@@ -14,11 +14,11 @@
 module.exports = {
   processors: [],
   plugins: [],
-  extends: "stylelint-config-standard",
+  extends: 'stylelint-config-standard',
   rules: {
-    "max-empty-lines": 2,
-    "font-family-no-missing-generic-family-keyword": [false, {
-      "ignoreFontFamilies": ["Arial"]
-    }]
-  }
+    'max-empty-lines': 2,
+    'font-family-no-missing-generic-family-keyword': [false, {
+      ignoreFontFamilies: ['Arial'],
+    }],
+  },
 };

@@ -15,7 +15,7 @@
 
 <script>
 import Boom from './Boom';
-import '@/assets/less/helloworld.less';
+import '@/assets/less/Home.less';
 
 export default {
   name: 'HelloWorld',
