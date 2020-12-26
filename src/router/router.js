@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router';
 import Home from '@/scene/Home.vue';
 import Boom from '@/scene/Boom.vue';
+import NoteExp from '@/scene/NoteExp.vue';
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: '/boom',
     name: 'boom',
     component: Boom,
+  },
+  {
+    path: '/noteexp',
+    name: 'noteexp',
+    component: NoteExp,
   },
 ];
 
