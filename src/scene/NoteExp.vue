@@ -18,10 +18,11 @@
 <!--        <img src="https://www.baidu.com/img/dong_e70247ce4b0a3e5ba73e8b3b05429d84.gif" style="width: 50%"/>-->
 <!--      </div>-->
     </div>
+<!--    <highlightjs language='javascript' :code="codesam"></highlightjs>-->
     <div>
       <p>预览</p>
-      <div id="mdshow" class="prearea"></div>
-      <div v-html="premd" class="prearea"></div>
+      <div id="mdshow" class="markdown-body"></div>
+      <div v-html="premd" class="markdown-body"></div>
     </div>
   </div>
 </template>
@@ -34,12 +35,15 @@ import markdownItTocAndAnchor from 'markdown-it-toc-and-anchor';
 import hljs from 'highlight.js';
 
 import '@/assets/scss/noteexp.scss';
+import '@/assets/css/mdgithub.css';
+import '@/assets/css/atom-one-light.css';
 
 export default {
   name: 'NoteExp',
   data() {
     return {
       premd: '',
+      codesam: '',
     };
   },
   props: {
@@ -63,17 +67,24 @@ export default {
       console.log(e);
     },
     save() {
+      const codesam = 'const foo = function (bar) {\n'
+        + 'return bar++; };\n'
+        + 'console.log(foo(5));';
+
+      this.codesam = codesam;
+
       const md2 = '# book\nSyntax highlighting\n'
         + '\n'
+        + '<h2> h2 Heading by HTML</h2>\n\n'
         + '``` javascript\n'
-        + 'var foo = function (bar) {\n'
+        + 'const foo = function (bar) {\n'
         + '  return bar++;\n'
         + '};\n'
         + '\n'
         + 'console.log(foo(5));\n'
         + '```\n'
         + '333333\n'
-      + '# bbb';
+        + '# bbb';
 
       // const md2 = '# h1 Heading 8-)\n'
       //   + '<h2> h2 Heading by HTML</h2>\n'
@@ -150,34 +161,20 @@ export default {
       //   + '466456\n'
       //   + '1. bar';
       const mdins = new MarkdownIt('commonmark', {
-        html: false,
+        html: true,
         xhtmlOut: true,
         breaks: true,
-        langPrefix: 'boom-',
         quotes: '“”‘’',
-        // highlight(str, lang) {
-        //   console.log(lang);
-        //   if (lang && hljs.getLanguage(lang)) {
-        //     try {
-        //       return hljs.highlight(lang, str).value;
-        //     } catch (e) {
-        //       console.log(e);
-        //     }
-        //   }
-        //   return ''; // use external default escaping
-        // },
-
         highlight(str, lang) {
           if (lang && hljs.getLanguage(lang)) {
             try {
               return `<pre class="hljs"><code>${
                 hljs.highlight(lang, str, true).value
               }</code></pre>`;
-            } catch (__) {}
+            } catch (e) {
+              console.log(e);
+            }
           }
-
-          console.log(mdins.utils.escapeHtml(str));
-
           return `<pre class="hljs"><code>${mdins.utils.escapeHtml(str)}</code></pre>`;
         },
       })
@@ -185,34 +182,12 @@ export default {
         .use(markdownItTocAndAnchor, {
           // eslint-disable-next-line no-unused-vars
           tocCallback(tocMarkdown, tocArray, tocHtml) {
-            // console.log(tocHtml);
-            // console.log(tocArray)
           },
           anchorLink: false,
           anchorLinkBefore: false,
         });
 
-      const premd = mdins.render(md2);
-      // eslint-disable-next-line
-        // const premd = markdown.toHTML(, 'Maruku');
-      // const premd = markdown.toHTML(md_content, 'Maruku');
-      // console.log(premd);
-      // console.log(premd.split('\n'));
-      // console.log(premd);
-
-      const stylemd = premd.split('\n').map((el) => {
-        const newel = el
-          .replace('<h1', '<h1 style="color:#99999"')
-          // .replace('<h2', '<h2 style="color:blue"')
-          .replace('<h2', '<h2 style="color:gold"')
-          .replace('<h3', '<h2 style="color:green"')
-          .replace('<p', '<p style="font-family:Arial;margin:0"');
-        return newel;
-      });
-      // console.log(stylemd);
-      this.premd = stylemd.join('\n');
-      // document.querySelector('#mdshow').innerHTML = stylemd.join('\n');
-      // document.querySelector('#mdshow').innerHTML = premd;
+      this.premd = mdins.render(md2);
     },
   },
 };
@@ -237,36 +212,4 @@ export default {
     margin-bottom: 4px;
     margin-top: 4px;
   }
-
-  .prearea {
-    background-color: #ffffff;
-
-    /*&.mdfix{*/
-    /*  margin: 0;*/
-    /*  padding: 0;*/
-    /*}*/
-
-    /*&h2 {*/
-    /*  margin-block-start: 0;*/
-    /*  margin-block-end: 0;*/
-    /*}*/
-  }
-  .prearea >>> h1 {
-    color: red;
-  }
-  .mdfix{
-    margin: 0;
-    padding: 0;
-    color: red;
-  }
-
-  .sff{
-    color:gold;
-  }
 </style>
-
-<!--<style>-->
-<!--  .prearea >>> .h1 {-->
-<!--    color: red;-->
-<!--  }-->
-<!--</style>-->
