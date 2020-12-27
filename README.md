@@ -10,7 +10,7 @@ yarn run server
 ```
 
 # demo
-![avatar](./docs/sg1227-1.jpg)
+![demo1](./docs/sg1227-1.jpg)
 
 
 
