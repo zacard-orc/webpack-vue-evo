@@ -9,4 +9,8 @@ yarn
 yarn run server
 ```
 
+# demo
+![avatar](./docs/sg1227-1.jpg)
+
+
 

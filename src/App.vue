@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/boom">Boom</router-link>
       <router-link to="/noteexp">Note Exp</router-link>
+      <router-link to="/css">Css</router-link>
     </div>
     <router-view />
   </div>
