@@ -25,6 +25,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/no-extranous-dependencies': 0,
+    'global-require': 0,
   },
   overrides: [
     {
