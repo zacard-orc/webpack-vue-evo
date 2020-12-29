@@ -12,6 +12,8 @@
     >
     </hello>
     <button  v-debounce="onLimClick">延迟阻塞按钮</button>
+
+<!--    <img v-LazyLoad="shoe.jpg" data-src="shoe.jpg" />-->
   </div>
 </template>
 

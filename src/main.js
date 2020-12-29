@@ -4,8 +4,10 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import router from './router/router';
 import Directives from './directives';
+import lazyload from './directives/lazyload';
 
 Vue.use(Directives);
+Vue.use(lazyload);
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
