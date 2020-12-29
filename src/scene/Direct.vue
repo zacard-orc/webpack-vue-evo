@@ -11,6 +11,7 @@
       @evHelloClick="onHelloClick"
     >
     </hello>
+    <button  v-debounce="onLimClick">延迟阻塞按钮</button>
   </div>
 </template>
 
@@ -38,6 +39,10 @@ export default {
   },
   methods: {
     onHelloClick(e) {
+      console.log(e);
+    },
+    onLimClick(e) {
+      console.log('bbb')
       console.log(e);
     },
   },

@@ -9,7 +9,8 @@ const state = {
       console.log(this);
       // eslint-disable-next-line prefer-rest-params
       // return oldfunc.call(this, ...arguments);
-      return oldfunc.call(this, ...arguments);
+      // eslint-disable-next-line prefer-rest-params
+      // return oldfunc.call(this, ...arguments);
       // eslint-disable-next-line prefer-rest-params
       return oldfunc(...arguments);
     };
