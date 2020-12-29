@@ -10,7 +10,13 @@ yarn run server
 ```
 
 # demo
-<img src="./docs/sg1227-1.jpg" style="width:100px"/>
+<div>
+<img src="./docs/sg1227-1.jpg" style="width:180px"/>
+</div>
+
+<div>
+<img src="./docs/sg1229-1.jpg" style="width:180px"/>
+</div>
 
 
 
