@@ -5,6 +5,7 @@
       <router-link to="/boom">Boom</router-link>
       <router-link to="/noteexp">Note Exp</router-link>
       <router-link to="/css">Css</router-link>
+      <router-link to="/css_priority">CssPriority</router-link>
       <router-link to="/direct">Direct</router-link>
     </div>
     <router-view />
