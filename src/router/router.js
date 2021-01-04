@@ -5,6 +5,7 @@ import NoteExp from '@/scene/NoteExp.vue';
 import Css from '@/scene/Css.vue';
 import CssPriority from '@/scene/CssPriority';
 import Direct from '@/scene/Direct.vue';
+import Vxs from '@/scene/Vxs.vue';
 
 const routes = [
   {
@@ -41,6 +42,11 @@ const routes = [
     path: '/direct',
     name: 'direct',
     component: Direct,
+  },
+  {
+    path: '/vxs',
+    name: 'vxs',
+    component: Vxs,
   },
 ];
 

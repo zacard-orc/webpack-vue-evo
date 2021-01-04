@@ -44,7 +44,7 @@ export default {
       console.log(e);
     },
     onLimClick(e) {
-      console.log('bbb')
+      console.log('bbb');
       console.log(e);
     },
   },
