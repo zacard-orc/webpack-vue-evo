@@ -157,5 +157,6 @@ export default {
 }
   .nice{
     background-color: red;
+    font-size: 16px;
   }
 </style>
