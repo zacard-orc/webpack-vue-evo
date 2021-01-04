@@ -155,4 +155,7 @@ export default {
 .btn-fm {
   margin-right: 10px;
 }
+  .nice{
+    background-color: red;
+  }
 </style>
