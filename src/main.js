@@ -19,3 +19,6 @@ const vm = new Vue({
 }).$mount('#app');
 
 window.vm = vm;
+
+
+console.log('bbb')
