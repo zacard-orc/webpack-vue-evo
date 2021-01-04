@@ -27,11 +27,48 @@
       <span class="btn-fm"><button @click="asyncAdd">+1</button></span>
       <span class="btn-fm"><button @click="asyncMinus">-1</button></span>
     </div>
+
+    <div class="sec">
+      <span>map getters count > 3 = </span>
+      <span class="btn-fm">{{bigCount}}</span>
+    </div>
+
+    <div class="sec">
+      <span>map state count > 6 = </span>
+      <span class="btn-fm">{{sixCount}}</span>
+    </div>
+
+    <div class="sec">
+      <span>module [login,cart,app] state = </span>
+      <span class="btn-fm">{{userName}}</span>
+      <span class="btn-fm">&</span>
+      <span class="btn-fm">{{cart}}</span>
+      <span class="btn-fm">&</span>
+      <span class="btn-fm">{{online}}</span>
+
+    </div>
+
+    <div class="sec">
+      <span>module [login,cart] action = </span>
+      <span class="btn-fm">
+        <button @click="changeName"> broadcast to Jason</button>
+      </span>
+    </div>
+
+    <div class="sec">
+      <span>module [app] action = </span>
+      <span class="btn-fm">
+        <button @click="appOnline"> unicast to Offline</button>
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
-// import { mapMutations } from 'vuex';
+import {
+  mapState,
+  mapGetters,
+} from 'vuex';
 
 export default {
   name: 'Vxs',
@@ -53,6 +90,22 @@ export default {
     getterName() {
       return this.$store.state.entry.name;
     },
+    userName() {
+      return this.$store.state.login.userName;
+    },
+    cart() {
+      return this.$store.state.cart.cartStatus;
+    },
+    online() {
+      return this.$store.state.app.online;
+    },
+    ...mapGetters({
+      bigCount: 'count3',
+    }),
+    ...mapState({
+      sixCount: (state) => state.entry._count >= 6,
+    }),
+
   },
   methods: {
     asyncAdd() {
@@ -81,6 +134,12 @@ export default {
     },
     queryName(e) {
       this.$store.commit('setName', e.target.value);
+    },
+    changeName() {
+      this.$store.dispatch('changeName', 'Jason');
+    },
+    appOnline() {
+      this.$store.dispatch('app/changeName', 'Offline');
     },
   },
 };
