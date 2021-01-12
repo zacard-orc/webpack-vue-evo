@@ -7,6 +7,8 @@ import Directives from './directives';
 import lazyload from './directives/lazyload';
 import { store } from './store';
 
+console.log('main loaded');
+
 Vue.use(Directives);
 Vue.use(lazyload);
 Vue.use(VueRouter);
@@ -19,6 +21,3 @@ const vm = new Vue({
 }).$mount('#app');
 
 window.vm = vm;
-
-
-console.log('bbb')

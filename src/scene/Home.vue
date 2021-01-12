@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <span>{{userinfo.name}} <button @click="changeName">点</button></span>
     <div class="g-1px-vw"></div>
     <div class="g-1px-px"></div>
     <div class="g-1px-fix"></div>
@@ -19,11 +20,23 @@ import '@/assets/less/Home.less';
 
 export default {
   name: 'HelloWorld',
+  data() {
+    return {
+      userinfo: {
+        name: 'tom',
+      },
+    };
+  },
   components: {
     Boom,
   },
   props: {
     msg: String,
+  },
+  methods: {
+    changeName() {
+      this.userinfo.name = 'work';
+    },
   },
 };
 </script>

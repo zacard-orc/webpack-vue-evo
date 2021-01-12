@@ -14,9 +14,25 @@
 </template>
 
 <script>
+
+const pr = () => new Promise((resolve) => (
+  setTimeout(() => {
+    resolve('ok');
+  }, 5000)
+));
 export default {
   name: 'App',
   components: {
+  },
+  async created() {
+    await pr();
+    console.log('created');
+  },
+  async mounted() {
+    // await pr();
+    console.log('mounted');
+    console.log(document.cookie);
+    console.log(sessionStorage.getItem('foo'));
   },
 };
 </script>
