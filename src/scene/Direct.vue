@@ -46,6 +46,8 @@ export default {
     onLimClick(e) {
       console.log('bbb');
       console.log(e);
+      const bb = '111';
+      console.log(`222${bb}`);
     },
   },
 };
@@ -53,5 +55,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-
+  .bb{
+    color: c;
+  }
 </style>

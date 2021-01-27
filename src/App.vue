@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { logfn } from '@/utils';
 
 const pr = () => new Promise((resolve) => (
   setTimeout(() => {
@@ -30,7 +31,11 @@ export default {
   },
   async mounted() {
     // await pr();
-    console.log('mounted');
+    // console.log('mounted');
+    const log = logfn();
+    log.info('mounted');
+    log.info(document.cookie);
+    log.info('mounted', { a: 2, b: 3, c: 4 },'333');
     console.log(document.cookie);
     console.log(sessionStorage.getItem('foo'));
   },
