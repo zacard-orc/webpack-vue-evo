@@ -8,6 +8,7 @@
       <router-link to="/css_priority">CssPriority</router-link>
       <router-link to="/direct">Direct</router-link>
       <router-link to="/vxs">Vxs</router-link>
+      <router-link to="/wkvideo">WKVideo</router-link>
     </div>
     <router-view />
   </div>

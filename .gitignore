@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 /dist
-
+./code_pub_work.sh
+./code_scp.sh
 
 # local env files
 .env.local

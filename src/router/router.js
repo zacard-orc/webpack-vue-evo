@@ -6,6 +6,7 @@ import Css from '@/scene/Css.vue';
 import CssPriority from '@/scene/CssPriority';
 import Direct from '@/scene/Direct.vue';
 import Vxs from '@/scene/Vxs.vue';
+import WKVideo from '@/scene/WKVideo.vue';
 
 const routes = [
   {
@@ -47,6 +48,11 @@ const routes = [
     path: '/vxs',
     name: 'vxs',
     component: Vxs,
+  },
+  {
+    path: '/wkvideo',
+    name: 'wkvideo',
+    component: WKVideo,
   },
 ];
 
